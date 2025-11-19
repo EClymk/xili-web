@@ -49,15 +49,16 @@ table {
 #body{
   font-family: 'Asap', roboto, sans-serif;
   font-size: 1em;
-  line-height: 1.5em;
-  color: #150c21;
+  line-height: 1.7em;
+  color: #1b1730;
+  background-color: #f6f7fb;
 }
 
 #main {
-  width: 54em;
+  max-width: 960px;
   margin: 0px auto;
-  position: relative;
   min-height: 100vh;
+  padding: 0 1.5em 4em;
 }
 
 a {
@@ -88,26 +89,54 @@ h1 {
 /* Profile image and description. */
 
 #intro {
-  padding-top: 6em;
+  padding-top: 5em;
   display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
 }
 
 #intro-text {
-  width: 40em;
-  float: left;
+  flex: 1 1 360px;
 }
 
 #intro-image {
-  margin: 3em 0 0 2em;
-  width: 12em;
-  height: 12em;
-  float: left;
+  margin-top: 3em;
+  width: 13em;
+  height: 13em;
   overflow: hidden;
   border-radius: 1em;
+  flex: 0 0 13em;
+  box-shadow: 0 20px 40px rgba(41, 33, 66, 0.15);
 }
 
 #intro-image img {
-  width: 12em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8em;
+  color: #8c8ea5;
+  margin-bottom: 0.6em;
+}
+
+.intro-links {
+  margin-top: 1.5em;
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.intro-links a {
+  border-bottom: 2px solid transparent;
+}
+
+.intro-links a:hover {
+  border-bottom-color: rgb(20, 110, 190);
 }
 
 /**************************************************/
@@ -139,8 +168,8 @@ h2 {
   border: none;
   background: none;
   color: #a0a8b0;
-  font-size: 1.6em;
-  line-height: 2.4em;
+  font-size: 1.3em;
+  line-height: 2.2em;
   margin-top: 0.5em;
   margin-right: 1em;
   float: left;
@@ -166,7 +195,7 @@ h2 {
 /* Isotope grid list of items. */
 
 .grid {
-  padding-bottom: 6em;
+  padding: 2em 0 6em;
 }
 
 /* clear fix */
@@ -176,21 +205,26 @@ h2 {
   clear: both;
 }
 
-.description {
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-}
-
 .list-item {
   width: 100%;
-  line-height: 1em;
+  line-height: 1.5em;
   margin-top: 1em;
+  background: #ffffff;
+  border-radius: 1em;
+  padding: 1.25em 1.5em;
+  box-shadow: 0 15px 40px rgba(24, 16, 48, 0.08);
+  border: 1px solid rgba(20, 110, 190, 0.05);
 }
 
 .list-item p.date {
   display: inline-block;
   width: 3em;
   color: #a0a8b0;
+  font-weight: 600;
+}
+
+.description {
+  margin-top: 2em;
 }
 
 /**************************************************/
@@ -244,10 +278,12 @@ h2 {
 /* Publication details (thumbnail media, title, and description). */
 
 .thumbnail {
-/*  width: 21%;*/
-  width: 18%;
+  width: 22%;
   float: left;
   margin-right: 2%;
+  border-radius: 0.8em;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(24, 16, 48, 0.15);
 }
 
 .thumbnail:hover {
@@ -255,10 +291,9 @@ h2 {
 }
 
 .thumbnail img {
-  margin-top: 0.4em;
-  border-radius: 5px;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .thumbnail video {
@@ -283,6 +318,13 @@ h3 a:hover {
 
 .publication {
   margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.list-item.publication:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .publication p {
@@ -292,16 +334,43 @@ h3 a:hover {
 }
 
 .project-description {
-  width: 80%;
+  width: 78%;
   float: left;
+}
+
+.project-links {
+  margin-top: 0.75em;
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.project-links a {
+  border-bottom: 2px solid transparent;
+}
+
+.project-links a:hover {
+  border-bottom-color: rgb(20, 110, 190);
+}
+
+.contact-card {
+  display: flex;
+  gap: 1em;
+}
+
+.contact-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #150c21;
 }
 
 /**************************************************/
 /* Subtle footer at the bottom of the page. */
 
 #footer {
-  color: #a0a8b0;
-  position: absolute;
-  bottom: 0;
-  line-height: 2.5em;
+  color: #8c8ea5;
+  margin-top: 4em;
+  text-align: center;
+  line-height: 1.8em;
 }
