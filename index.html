@@ -26,24 +26,55 @@
   <body id="body">
 
     <div id="main">
-      <div id="intro">
-        <div id="intro-text">
-          <p class="eyebrow">University of Michigan / Robotics Department</p>
+      <div id="intro" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">University of Michigan &middot; Robotics</p>
           <h1>Xili Yi</h1>
-          <p>
-            Hi! I’m Xili Yi, a PhD candidate in Robotics at the University of Michigan. I work on contact-rich manipulation, focusing on how robots sense, predict, and control physical interactions involving friction, deformation, and vibration. My research blends mechanics, perception, and learning to give robots a more reliable understanding of how objects behave during real-world manipulation. I’m especially interested in building systems that combine principled models with multimodal sensing—audio, vision, and touch—to make manipulation more robust, adaptive, and deployable outside controlled lab settings.
+          <p class="lede">
+            PhD candidate building contact-rich manipulation systems that sense, predict, and control friction, deformation, and vibration so robots understand how objects behave in the wild.
           </p>
+          <div class="hero-tags">
+            <span class="pill">Tactile + audio perception</span>
+            <span class="pill">Contact mechanics</span>
+            <span class="pill">Model-based learning</span>
+          </div>
           <p>
             I expect to graduate in Spring/Summer 2026 and am open to research and engineering opportunities in robotics.
           </p>
-          <div class="intro-links">
+          <div class="intro-links hero-actions">
             <a href="mailto:yixili@umich.edu">Email</a>
-            <!-- <a href="https://va2contact.github.io/">VA2CONTACT</a>
-            <a href="https://vib2move.github.io/">VIB2MOVE</a> -->
+            <a href="https://scholar.google.com/citations?user=C_8aYrcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
           </div>
         </div>
-        <div id="intro-image">
-          <img src="images/xili.jpg" alt="Portrait of Xili Yi">
+        <div class="hero-visual">
+          <div id="intro-image">
+            <img src="images/xili.jpg" alt="Portrait of Xili Yi">
+          </div>
+          <div class="hero-burst">
+            <p class="burst-title">Contact-rich demos</p>
+            <p class="burst-body">Custom hardware + sensing rigs built for friction, vibration, and touch experiments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="showreel">
+        <div class="showreel-header">
+          <p class="eyebrow">Drop quick gifs or teasers here</p>
+          <p class="showreel-title">Fast snapshots of lab runs and project reels.</p>
+        </div>
+        <div class="demo-rail">
+          <div class="demo-card">
+            <p class="demo-label">Placeholder for a looping GIF</p>
+            <p class="demo-note">Show a tactile or audio-sensing clip.</p>
+          </div>
+          <div class="demo-card">
+            <p class="demo-label">Placeholder for teaser image</p>
+            <p class="demo-note">Use a project montage, collage, or poster strip.</p>
+          </div>
+          <div class="demo-card">
+            <p class="demo-label">Placeholder for hardware shot</p>
+            <p class="demo-note">Highlight a custom rig, gripper, or sensor stack.</p>
+          </div>
         </div>
       </div>
 
@@ -71,7 +102,7 @@
           </div>
 
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p> <span>Presented <a href="https://www.mmintlab.com/dual-limit-surfaces/">Dual Limit Surfaces</a> at a href="https://roboticsconference.org/">RSS 2023</a>, showing that asymmetric friction modeling and constrained planners enable precise top-contact sliding with 90% lower orientation error than naive path planners.</span>
+            <p class="date">2023</p> <span>Presented <a href="https://www.mmintlab.com/dual-limit-surfaces/">Dual Limit Surfaces</a> at <a href="https://roboticsconference.org/">RSS 2023</a>, showing that asymmetric friction modeling and constrained planners enable precise top-contact sliding with 90% lower orientation error than naive path planners.</span>
           </div>
 
           <div class="list-item highlight contact-card" data-category="highlight">
@@ -85,6 +116,51 @@
 
         <div class="list-item publication description" data-category="publication">
           <p>Below are the projects I am actively building and maintaining. Each combines new hardware with learning and planning pipelines to unlock richer contact understanding and manipulation skill.</p>
+        </div>
+
+        <div class="list-item publication section-label" data-category="publication">
+          <p>Publications (put most important and first-author papers first; pull details from <a href="https://scholar.google.com/citations?user=C_8aYrcAAAAJ&hl=en">Google Scholar</a>).</p>
+        </div>
+
+        <div class="list-item publication paper-card" data-category="publication">
+          <div class="thumbnail placeholder-thumb"></div>
+          <div class="project-description">
+            <h3><a href="#">First-author paper title placeholder</a></h3>
+            <p class="paper-meta"><span class="pill">First author</span><span class="paper-year">2025 &middot; Venue</span></p>
+            <p>Swap in your latest lead-author work; keep this at the top of the list.</p>
+            <p class="project-links">
+              <a href="#">Paper link</a>
+              <a href="#">Project page</a>
+              <a href="#">Code</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="list-item publication paper-card" data-category="publication">
+          <div class="thumbnail placeholder-thumb"></div>
+          <div class="project-description">
+            <h3><a href="#">Major contribution paper placeholder</a></h3>
+            <p class="paper-meta"><span class="pill">Core contributor</span><span class="paper-year">2024 &middot; Venue</span></p>
+            <p>Use for a second key paper where you led methods/experiments or co-led the project.</p>
+            <p class="project-links">
+              <a href="#">Paper link</a>
+              <a href="#">Project page</a>
+              <a href="#">Code</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="list-item publication paper-card" data-category="publication">
+          <div class="thumbnail placeholder-thumb"></div>
+          <div class="project-description">
+            <h3><a href="#">Collaboration paper placeholder</a></h3>
+            <p class="paper-meta"><span class="pill">Collaboration</span><span class="paper-year">2023 &middot; Venue</span></p>
+            <p>Add notable later-author work; include a short role note (e.g., tactile hardware, contact modeling, experiments).</p>
+            <p class="project-links">
+              <a href="#">Paper link</a>
+              <a href="#">Project page</a>
+            </p>
+          </div>
         </div>
 
         <div id="main-projects">
