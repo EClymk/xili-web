@@ -31,12 +31,12 @@
           <p class="eyebrow">University of Michigan &middot; Robotics</p>
           <h1>Xili Yi</h1>
           <p class="lede">
-            PhD candidate building contact-rich manipulation systems that sense, predict, and control friction, deformation, and vibration so robots understand how objects behave in the wild.
+            I work on contact-rich manipulation, combining physics, sensing, and learning to give robots a deeper understanding of how objects behave through friction, deformation, and vibration. My research focuses on developing methods and sensing modalities that reveal the structure of contact—so robots can predict, control, and generalize their interactions more reliably in the real world.
           </p>
           <div class="hero-tags">
-            <span class="pill">Tactile + audio perception</span>
-            <span class="pill">Contact mechanics</span>
-            <span class="pill">Model-based learning</span>
+            <span class="pill">Contact-rich manipulation</span>
+            <span class="pill">Multimodal perception (tactile, vibration, audio)</span>
+            <span class="pill">Physics-based modeling & learning</span>
           </div>
           <p>
             I expect to graduate in Spring/Summer 2026 and am open to research and engineering opportunities in robotics.
@@ -44,36 +44,42 @@
           <div class="intro-links hero-actions">
             <a href="mailto:yixili@umich.edu">Email</a>
             <a href="https://scholar.google.com/citations?user=C_8aYrcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/xili-yi-800587207/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
         <div class="hero-visual">
           <div id="intro-image">
             <img src="images/xili.jpg" alt="Portrait of Xili Yi">
           </div>
-          <div class="hero-burst">
+          <!-- <div class="hero-burst">
             <p class="burst-title">Contact-rich demos</p>
             <p class="burst-body">Custom hardware + sensing rigs built for friction, vibration, and touch experiments.</p>
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div class="showreel">
-        <div class="showreel-header">
-          <p class="eyebrow">Drop quick gifs or teasers here</p>
-          <p class="showreel-title">Fast snapshots of lab runs and project reels.</p>
-        </div>
         <div class="demo-rail">
           <div class="demo-card">
-            <p class="demo-label">Placeholder for a looping GIF</p>
-            <p class="demo-note">Show a tactile or audio-sensing clip.</p>
+            <img src="images/vib2move.gif" alt="Fingertip micro-vibration reconfiguration in hand" />
+            <div class="demo-overlay">
+              <p class="demo-label">VIB2MOVE micro-vibration regrasp</p>
+              <p class="demo-note">Parallel-jaw gripper repositioning objects with vibration.</p>
+            </div>
           </div>
           <div class="demo-card">
-            <p class="demo-label">Placeholder for teaser image</p>
-            <p class="demo-note">Use a project montage, collage, or poster strip.</p>
+            <img src="images/dual-limit-teaser.gif" alt="Dual limit surface sliding comparison" />
+            <div class="demo-overlay">
+              <p class="demo-label">Dual Limit Surfaces</p>
+              <p class="demo-note">Frictional model and planner that keeps top contact locked in place.</p>
+            </div>
           </div>
           <div class="demo-card">
-            <p class="demo-label">Placeholder for hardware shot</p>
-            <p class="demo-note">Highlight a custom rig, gripper, or sensor stack.</p>
+            <img src="images/dl_ar.gif" alt="Dual limit surfaces on an inclined plane" />
+            <div class="demo-overlay">
+              <p class="demo-label">Dual Limit Surfaces in general cases</p>
+              <p class="demo-note">Slippage-free sliding on horizontal/inclined surfaces.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -114,28 +120,103 @@
           </div>
         </div>
 
-        <div class="list-item publication description" data-category="publication">
+        <!-- <div class="list-item publication description" data-category="publication">
           <p>Below are the projects I am actively building and maintaining. Each combines new hardware with learning and planning pipelines to unlock richer contact understanding and manipulation skill.</p>
-        </div>
+        </div> -->
 
-        <div class="list-item publication section-label" data-category="publication">
+        <!-- <div class="list-item publication section-label" data-category="publication">
           <p>Publications (put most important and first-author papers first; pull details from <a href="https://scholar.google.com/citations?user=C_8aYrcAAAAJ&hl=en">Google Scholar</a>).</p>
-        </div>
+        </div> -->
 
-        <div class="list-item publication paper-card" data-category="publication">
-          <div class="thumbnail placeholder-thumb"></div>
-          <div class="project-description">
-            <h3><a href="#">First-author paper title placeholder</a></h3>
-            <p class="paper-meta"><span class="pill">First author</span><span class="paper-year">2025 &middot; Venue</span></p>
-            <p>Swap in your latest lead-author work; keep this at the top of the list.</p>
-            <p class="project-links">
-              <a href="#">Paper link</a>
-              <a href="#">Project page</a>
-              <a href="#">Code</a>
-            </p>
+        
+
+        <div id="main-projects">
+
+
+          <div class="list-item publication" data-category="publication">
+            <a href="https://vib2move.github.io/" class="thumbnail">
+              <img src="images/vib2move.gif" alt="VIB2MOVE teaser image" />
+            </a>
+            <div class="project-description">
+              <h3><a href="https://vib2move.github.io/">VIB2MOVE: In-hand Object Reconfiguration via Fingertip Micro-Vibrations</a></h3>
+              <p class="authors"><b>X. Yi</b>, N. Fazeli</p>
+              <p class="venue">Robotics: Science and Systems (RSS) 2025</p>
+              <p>VIB2MOVE introduces a fingertip actuator that modulates friction with micro-vibrations, a sliding dynamics model, and a planner that synchronizes end-effector motion with vibration phases. The approach reliably repositions planar objects using a simple parallel gripper, achieving sub-centimeter accuracy across a range of shapes.</p>
+              <p class="project-links">
+                <a href="https://roboticsconference.org/program/papers/108/">Paper</a>
+                <a href="https://vib2move.github.io/">Project Page</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="list-item publication" data-category="publication">
+            <a href="https://va2contact.github.io/" class="thumbnail contain">
+              <img src="images/va2contact-teaser.jpg" alt="VA2CONTACT teaser image" />
+            </a>
+            <div class="project-description">
+              <h3><a href="https://va2contact.github.io/">VA2CONTACT: Visual-auditory Extrinsic Contact Estimation</a></h3>
+              <p class="authors"><b>X. Yi</b>, J. Lee, N. Fazeli</p>
+              <p class="venue">(submitted)</p>
+              <p>VA2CONTACT fuses global visual context with local cues from active audio excitation to infer where grasped objects touch the environment. The system leverages differentiable acoustic rendering, an attention-based fusion network, and a contact reasoning head that transfers from simulation to real hardware without additional finetuning.</p>
+              <p class="project-links">
+                <a href="https://arxiv.org/abs/2409.14608">Paper</a>
+                <a href="https://va2contact.github.io/">Project Page</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="list-item publication" data-category="publication">
+            <a href="https://www.mmintlab.com/dual-limit-surfaces/" class="thumbnail">
+              <img src="images/dl_ar.gif" alt="Dual limit surfaces sliding path comparison" />
+            </a>
+            <div class="project-description">
+              <h3><a href="https://www.mmintlab.com/dual-limit-surfaces/">Dual asymmetric limit surfaces and their applications to planar manipulation</a></h3>
+              <p class="authors"><b>X. Yi</b>, A. Dang, N. Fazeli</p>
+              <p class="venue">Autonomous Robots</p>
+              <p>We extended Precise Object Sliding with Top Contact via Asymmetric Dual Limit Surfaces to more general cases including inclined surfaces.</p>
+              <p class="project-links">
+                <a href="https://dl.acm.org/doi/abs/10.1007/s10514-024-10173-5">Paper</a>
+                <a href="https://www.mmintlab.com/dual-limit-surfaces/">Project Page</a>
+                <a href="https://github.com/MMintLab/Dual-Limit-Suface">Code</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="list-item publication" data-category="publication">
+            <a href="https://www.mmintlab.com/dual-limit-surfaces/" class="thumbnail">
+              <img src="images/dual-limit-teaser.gif" alt="Dual limit surfaces sliding path comparison" />
+            </a>
+            <div class="project-description">
+              <h3><a href="https://www.mmintlab.com/dual-limit-surfaces/">Precise Object Sliding with Top Contact via Asymmetric Dual Limit Surfaces</a></h3>
+              <p class="authors"><b>X. Yi</b>, N. Fazeli</p>
+              <p class="venue">Robotics: Science and Systems (RSS) 2023</p>
+              <p>We model the frictional interactions at the top gripper-object interface and bottom support plane simultaneously via asymmetric Dual Limit Surfaces, then plan twists that keep the gripper stuck while the object slips to its goal. The planner avoids orientation drift and empirically cuts final pose error by 90% compared to linear paths.</p>
+              <p class="project-links">
+                <a href="https://arxiv.org/abs/2305.14289">Paper</a>
+                <a href="https://www.mmintlab.com/dual-limit-surfaces/">Project Page</a>
+                <a href="https://github.com/MMintLab/Dual-Limit-Suface">Code</a>
+              </p>
+            </div>
           </div>
         </div>
 
+        <div class="list-item publication paper-card" data-category="publication">
+          <div class="thumbnail placeholder-thumb">
+            <img src="images/jmr_12_1_011016_f016.png"/>
+          </div>
+          <div class="project-description">
+            <h3><a href="#">Torsional Stiffness Improvement of a Soft Pneumatic Finger Using Embedded Skeleton</a></h3>
+            <p class="authors">A. Lotfiani, H. Zhao, Z. Shao, <b>X. Yi</b></p>
+            <p class="venue">Journal of Mechanisms and Robotics 2020</p>
+            <p>We enhance the torsional stiffness of soft robotic actuators without sacrificing their compliance by embedding tunable internal reinforcement. Our design preserves flexibility in bending and extension while providing significantly greater resistance to twist, enabling more stable, controllable, and load-capable soft robots.</p>
+            <p class="project-links">
+              <a href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article/12/1/011016/1065715/Torsional-Stiffness-Improvement-of-a-Soft">Paper link</a>
+              <!-- <a href="#">Project page</a>
+              <a href="#">Code</a> -->
+            </p>
+          </div>
+        </div>
+<!-- 
         <div class="list-item publication paper-card" data-category="publication">
           <div class="thumbnail placeholder-thumb"></div>
           <div class="project-description">
@@ -161,75 +242,7 @@
               <a href="#">Project page</a>
             </p>
           </div>
-        </div>
-
-        <div id="main-projects">
-          <div class="list-item publication" data-category="publication">
-            <a href="https://va2contact.github.io/" class="thumbnail">
-              <img src="images/va2contact-teaser.jpg" alt="VA2CONTACT teaser image" />
-            </a>
-            <div class="project-description">
-              <h3><a href="https://va2contact.github.io/">VA2CONTACT: Visual-auditory Extrinsic Contact Estimation</a></h3>
-              <p class="authors">X. Yi, J. Lee, N. Fazeli</p>
-              <p class="venue">(submitted)</p>
-              <p>VA2CONTACT fuses global visual context with local cues from active audio excitation to infer where grasped objects touch the environment. The system leverages differentiable acoustic rendering, an attention-based fusion network, and a contact reasoning head that transfers from simulation to real hardware without additional finetuning.</p>
-              <p class="project-links">
-                <a href="https://arxiv.org/abs/2409.14608">Paper</a>
-                <a href="https://va2contact.github.io/">Project Page</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="list-item publication" data-category="publication">
-            <a href="https://vib2move.github.io/" class="thumbnail">
-              <img src="images/vib2move-teaser.jpg" alt="VIB2MOVE teaser image" />
-            </a>
-            <div class="project-description">
-              <h3><a href="https://vib2move.github.io/">VIB2MOVE: In-hand Object Reconfiguration via Fingertip Micro-Vibrations</a></h3>
-              <p class="authors">X. Yi, N. Fazeli</p>
-              <p class="venue">Robotics: Science and Systems (RSS) 2025</p>
-              <p>VIB2MOVE introduces a fingertip actuator that modulates friction with micro-vibrations, a sliding dynamics model, and a planner that synchronizes end-effector motion with vibration phases. The approach reliably repositions planar objects using a simple parallel gripper, achieving sub-centimeter accuracy across a range of shapes.</p>
-              <p class="project-links">
-                <a href="https://roboticsconference.org/program/papers/108/">Paper</a>
-                <a href="https://vib2move.github.io/">Project Page</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="list-item publication" data-category="publication">
-            <a href="https://www.mmintlab.com/dual-limit-surfaces/" class="thumbnail">
-              <img src="images/dual-limit-teaser.gif" alt="Dual limit surfaces sliding path comparison" />
-            </a>
-            <div class="project-description">
-              <h3><a href="https://www.mmintlab.com/dual-limit-surfaces/">Dual asymmetric limit surfaces and their applications to planar manipulation</a></h3>
-              <p class="authors">X. Yi, A. Dang, N. Fazeli</p>
-              <p class="venue">Autonomous Robots</p>
-              <p>We extended Precise Object Sliding with Top Contact via Asymmetric Dual Limit Surfaces to more general cases including inclined surfaces.</p>
-              <p class="project-links">
-                <a href="https://dl.acm.org/doi/abs/10.1007/s10514-024-10173-5">Paper</a>
-                <a href="https://www.mmintlab.com/dual-limit-surfaces/">Project Page</a>
-                <a href="https://github.com/MMintLab/Dual-Limit-Suface">Code</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="list-item publication" data-category="publication">
-            <a href="https://www.mmintlab.com/dual-limit-surfaces/" class="thumbnail">
-              <img src="images/dual-limit-teaser.gif" alt="Dual limit surfaces sliding path comparison" />
-            </a>
-            <div class="project-description">
-              <h3><a href="https://www.mmintlab.com/dual-limit-surfaces/">Precise Object Sliding with Top Contact via Asymmetric Dual Limit Surfaces</a></h3>
-              <p class="authors">X. Yi, N. Fazeli</p>
-              <p class="venue">Robotics: Science and Systems (RSS) 2023</p>
-              <p>We model the frictional interactions at the top gripper-object interface and bottom support plane simultaneously via asymmetric Dual Limit Surfaces, then plan twists that keep the gripper stuck while the object slips to its goal. The planner avoids orientation drift and empirically cuts final pose error by 90% compared to linear paths.</p>
-              <p class="project-links">
-                <a href="https://arxiv.org/abs/2305.14289">Paper</a>
-                <a href="https://www.mmintlab.com/dual-limit-surfaces/">Project Page</a>
-                <a href="https://github.com/MMintLab/Dual-Limit-Suface">Code</a>
-              </p>
-            </div>
-          </div>
-        </div>
+        </div> -->
 
       </div>
 
