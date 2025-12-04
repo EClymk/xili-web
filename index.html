@@ -31,7 +31,7 @@
           <p class="eyebrow">University of Michigan &middot; Robotics</p>
           <h1>Xili Yi</h1>
           <p class="lede">
-            I work on contact-rich manipulation, combining physics, sensing, and learning to give robots a deeper understanding of how objects behave through friction, deformation, and vibration. My research focuses on developing methods and sensing modalities that reveal the structure of contact—so robots can predict, control, and generalize their interactions more reliably in the real world.
+            I am a 5th-year PhD candidate in robotics working on contact-rich manipulation. My research combines physics, sensing, and learning to give robots a deeper understanding of how objects behave through friction, deformation, and vibration. I develop methods and sensing modalities that reveal the structure of contact—so robots can predict, control, and generalize their interactions more reliably in the real world.
           </p>
           <div class="hero-tags">
             <span class="pill">Contact-rich manipulation</span>
@@ -85,40 +85,11 @@
       </div>
 
       <div id="filters" class="button-group">
-        <button class="button is-checked" data-filter=".highlight">Highlights</button>
         <button class="button" data-filter=".publication">Projects</button>
+        <button class="button is-checked" data-filter=".news">News</button>
       </div>
 
       <div class="grid">
-
-        <div id="main-highlights">
-          <!-- <div class="list-item highlight" data-category="highlight">
-            <p class="date">2025</p> <span>VA2CONTACT will appear at <a href="https://corlconf.org/">CoRL 2025</a>, demonstrating zero-shot transfer from simulated training to real hardware for extrinsic contact estimation through joint visual-auditory sensing.</span>
-          </div> -->
-
-          <div class="list-item highlight" data-category="highlight">
-            <p class="date">2025</p> <span>Presented <a href="https://vib2move.github.io/">Vib2Move</a> at <a href="https://roboticsconference.org/">RSS 2025</a>, showing that with fingertip micro-vibrations that modulate friction in-hand, we can enable millimeter-level object reconfiguration with a parallel jaw gripper in free space.</span>
-          </div>
-
-          <!-- <div class="list-item highlight" data-category="highlight">
-            <p class="date">2024</p> <span>Built custom sensing rigs that pair active audio excitation with vision and proprioception so robots can perceive subtle contact events even when objects are occluded.</span>
-          </div> -->
-          <div class="list-item highlight" data-category="highlight">
-            <p class="date">2024</p> <span>Published <a href="https://link.springer.com/article/10.1007/s10514-024-10173-5">Dual asymmetric limit surfaces and their applications to planar manipulation</a> at Autonomous Robots, extended Dual Limit Surfaces model to more general cases.</span>
-          </div>
-
-          <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p> <span>Presented <a href="https://www.mmintlab.com/dual-limit-surfaces/">Dual Limit Surfaces</a> at <a href="https://roboticsconference.org/">RSS 2023</a>, showing that asymmetric friction modeling and constrained planners enable precise top-contact sliding with 90% lower orientation error than naive path planners.</span>
-          </div>
-
-          <div class="list-item highlight contact-card" data-category="highlight">
-            <p class="date"></p>
-            <div>
-              <p class="contact-title">Let's collaborate</p>
-              <p>I'm always excited to chat about tactile perception, contact-rich planning, and experimental robotics. Reach me at <a href="mailto:yixili@umich.edu">yixili@umich.edu</a>.</p>
-            </div>
-          </div>
-        </div>
 
         <!-- <div class="list-item publication description" data-category="publication">
           <p>Below are the projects I am actively building and maintaining. Each combines new hardware with learning and planning pipelines to unlock richer contact understanding and manipulation skill.</p>
@@ -216,6 +187,35 @@
             </p>
           </div>
         </div>
+
+        <div id="main-news">
+          <!-- <div class="list-item highlight" data-category="highlight">
+            <p class="date">2025</p> <span>VA2CONTACT will appear at <a href="https://corlconf.org/">CoRL 2025</a>, demonstrating zero-shot transfer from simulated training to real hardware for extrinsic contact estimation through joint visual-auditory sensing.</span>
+          </div> -->
+
+          <div class="list-item news" data-category="news">
+            <p class="date">2025</p> <span>Presented <a href="https://vib2move.github.io/">Vib2Move</a> at <a href="https://roboticsconference.org/">RSS 2025</a>, showing that with fingertip micro-vibrations that modulate friction in-hand, we can enable millimeter-level object reconfiguration with a parallel jaw gripper in free space.</span>
+          </div>
+
+          <!-- <div class="list-item highlight" data-category="highlight">
+            <p class="date">2024</p> <span>Built custom sensing rigs that pair active audio excitation with vision and proprioception so robots can perceive subtle contact events even when objects are occluded.</span>
+          </div> -->
+          <div class="list-item news" data-category="news">
+            <p class="date">2024</p> <span>Published <a href="https://link.springer.com/article/10.1007/s10514-024-10173-5">Dual asymmetric limit surfaces and their applications to planar manipulation</a> at Autonomous Robots, extended Dual Limit Surfaces model to more general cases.</span>
+          </div>
+
+          <div class="list-item news" data-category="news">
+            <p class="date">2023</p> <span>Presented <a href="https://www.mmintlab.com/dual-limit-surfaces/">Dual Limit Surfaces</a> at <a href="https://roboticsconference.org/">RSS 2023</a>, showing that asymmetric friction modeling and constrained planners enable precise top-contact sliding with 90% lower orientation error than naive path planners.</span>
+          </div>
+
+          <div class="list-item news contact-card" data-category="news">
+            <p class="date"></p>
+            <div>
+              <p class="contact-title">Let's collaborate</p>
+              <p>I'm always excited to chat about tactile perception, contact-rich planning, and experimental robotics. Reach me at <a href="mailto:yixili@umich.edu">yixili@umich.edu</a>.</p>
+            </div>
+          </div>
+        </div>
 <!-- 
         <div class="list-item publication paper-card" data-category="publication">
           <div class="thumbnail placeholder-thumb"></div>
@@ -275,8 +275,11 @@
 
       function update_isotope() {
         var defaultFilterValue = localStorage.getItem('filterValue');
+        if (defaultFilterValue === ".highlight") {
+          defaultFilterValue = ".news";
+        }
         if (defaultFilterValue == null) {
-          defaultFilterValue = ".highlight";
+          defaultFilterValue = ".news";
         }
         $grid.isotope({ filter: defaultFilterValue });
         var buttons = document.getElementsByClassName("button");
