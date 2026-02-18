@@ -221,8 +221,8 @@ h1 {
 
 .demo-rail {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.9em;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3.4em;
 }
 
 .demo-card {
@@ -592,6 +592,7 @@ h3 a:hover {
   #intro-image {
     margin-top: 0;
   }
+
 }
 
 @media (max-width: 720px) {
@@ -603,4 +604,5 @@ h3 a:hover {
     width: 100%;
     height: auto;
   }
+
 }
